@@ -1,28 +1,31 @@
 apiVersion: v1
+kind: Namespace
+metadata:
+  name: cv-app1
+---
+apiVersion: v1
 kind: Pod
 metadata:
-  creationTimestamp: null
+  name: openvino
+  namespace: cv-app1
   labels:
     run: openvino
-  name: openvino
 spec:
+  hostNetwork: true
   containers:
-  - args:
+  - name: openvino
+    image: kangwarn/ubuntu-openvino-dev:v1
+    args:
     - bash
     - -c
-    - source /root/openvino_env/bin/activate && cd /root/openvino_notebooks && jupyter lab notebooks --allow-root --ip=0.0.0.0
+    - source /root/openvino_env/bin/activate && cd /root/openvino_notebooks && jupyter lab notebooks --allow-root --ip=0.0.0.0 --port=8888
     volumeMounts:
     - mountPath: /dev
       name: devdir
     - mountPath: /sys
       name: sysdir
-    image: kangwarn/ubuntu-openvino-dev:v1
-    name: openvino
     securityContext:
-       privileged: true
-  dnsPolicy: ClusterFirst
-  restartPolicy: Always
-  hostNetwork: true
+      privileged: true
   volumes:
   - name: sysdir
     hostPath:
@@ -32,4 +35,5 @@ spec:
     hostPath:
       path: /dev
       type: Directory
-status: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
