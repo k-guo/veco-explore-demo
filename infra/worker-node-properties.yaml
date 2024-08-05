@@ -42,13 +42,14 @@ data:
   networkconfig: |
         version: 2
         ethernets:
-            ens192:
-                dhcp: "false"
-                addresses:
-                    - 172.18.0.103/24
-                nameservers:
-                    addresses:
-                        - 172.18.0.1
-                routes:
-                    - to: 0.0.0.0/0
-                      via: 172.18.0.1
+          any:
+            match:
+              name: e*
+            dhcp4: no
+            dhcp6: no
+            addresses:
+              - 172.18.0.103/24
+            gateway4: 172.18.0.1
+            nameservers:
+              addresses:
+                - 172.18.0.1
