@@ -42,7 +42,7 @@ data:
   networkconfig: |
         version: 2
         ethernets:
-            eth0:
+            ens192:
                 dhcp: "false"
                 addresses:
                     - 172.18.0.103/24
