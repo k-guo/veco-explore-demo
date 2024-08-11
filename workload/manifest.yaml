@@ -16,5 +16,5 @@ spec:
       hostNetwork: true
       containers:
       - name: explore-demo
-        image: kmikholap/explore-mfg-demo:v2-gpu
+        image: kmikholap/explore-mfg-demo:v2
 
