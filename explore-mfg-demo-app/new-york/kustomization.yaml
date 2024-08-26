@@ -2,6 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 bases:
   - ../base
-  - ny-data.yaml
+  - lvs-data.yaml
 patches:
-  - path: ny-config.yaml
+  - path: lvs-config.yaml
