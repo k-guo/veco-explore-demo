@@ -48,7 +48,7 @@ data:
             dhcp4: no
             dhcp6: no
             addresses:
-              - 172.18.0.192/24
+              - 172.18.0.200/24
             gateway4: 172.18.0.1
             nameservers:
               addresses:
