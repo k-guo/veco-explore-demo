@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: explore-mfg-demo
-        image: kmikholap/explore-mfg-demo:v2
+        image: kmikholap/explore-mfg-demo:v4
         securityContext:
           privileged: true
           capabilities:
