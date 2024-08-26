@@ -5,7 +5,7 @@ metadata:
   namespace: explore-mfg-demo
 
 data:
-  DEVICE_NAME: "GPU"
+  DEVICE_NAME: "CPI"
   VIDEO_URL: "rtsp://172.18.0.182/axis-media/media.amp?fps=30"
   NODE_RED_DATA_URL: "http://192.168.0.5:1880/updateHBW"
   VERTICAL_LINES: "1300,1800"
