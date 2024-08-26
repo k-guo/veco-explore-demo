@@ -6,7 +6,7 @@ metadata:
 
 data:
   DEVICE_NAME: "GPU"
-  VIDEO_URL: "rtsp://172.22.22.182/axis-media/media.amp?fps=30"
+  VIDEO_URL: "rtsp://172.18.0.182/axis-media/media.amp?fps=30"
   NODE_RED_DATA_URL: "http://192.168.0.5:1880/updateHBW"
   VERTICAL_LINES: "1300,1800"
   HORIZONTAL_LINES: "500,750"
